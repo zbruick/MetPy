@@ -18,8 +18,7 @@ By reading model output data from a netCDF file, we can create a four panel plot
 * Precipitable water
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     import cartopy.crs as ccrs
     import cartopy.feature as cfeature
@@ -38,7 +37,7 @@ By reading model output data from a netCDF file, we can create a four panel plot
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     crs = ccrs.LambertConformal(central_longitude=-100.0, central_latitude=45.0)
@@ -50,7 +49,7 @@ By reading model output data from a netCDF file, we can create a four panel plot
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
 
@@ -70,7 +69,7 @@ By reading model output data from a netCDF file, we can create a four panel plot
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # Open the example netCDF data
@@ -106,7 +105,7 @@ By reading model output data from a netCDF file, we can create a four panel plot
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # Combine 1D latitude and longitudes into a 2D grid of locations
@@ -119,7 +118,7 @@ By reading model output data from a netCDF file, we can create a four panel plot
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # Pull out the data
@@ -135,7 +134,7 @@ By reading model output data from a netCDF file, we can create a four panel plot
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # Do unit conversions to what we wish to plot
@@ -151,7 +150,7 @@ By reading model output data from a netCDF file, we can create a four panel plot
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # Smooth the height data
@@ -165,7 +164,7 @@ By reading model output data from a netCDF file, we can create a four panel plot
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # Create the figure and plot background on different axes
@@ -226,7 +225,10 @@ By reading model output data from a netCDF file, we can create a four panel plot
 
 
 
-**Total running time of the script:** ( 0 minutes  8.031 seconds)
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  9.756 seconds)
 
 
 .. _sphx_glr_download_examples_Four_Panel_Map.py:

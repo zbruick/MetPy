@@ -13,7 +13,6 @@ Natural Neighbor Verification
 Walks through the steps of Natural Neighbor interpolation to validate that the algorithmic
 approach taken in MetPy is correct.
 
-
 Find natural neighbors visual test
 
 A triangle is a natural neighbor for a point if the
@@ -56,8 +55,7 @@ Algorithmically:
 8. Repeat steps 4 through 7 for each grid cell.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     import matplotlib.pyplot as plt
     import numpy as np
@@ -83,8 +81,7 @@ estimate a value using natural neighbor interpolation.
 The locations of these observations are then used to generate a Delaunay triangulation.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     np.random.seed(100)
 
@@ -135,8 +132,7 @@ Using the circumcenter and circumcircle radius information from
 examine the results to see if they are correct.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     def draw_circle(ax, x, y, r, m, label):
         th = np.linspace(0, 2 * np.pi, 100)
@@ -185,8 +181,7 @@ What?....the circle from triangle 8 looks pretty darn close. Why isn't
 grid 0 included in that circle?
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     x_t, y_t = tri_info[8]['cc']
     r = tri_info[8]['r']
@@ -213,8 +208,7 @@ Lets do a manual check of the above interpolation value for grid 0 (southernmost
 Grab the circumcenters and radii for natural neighbors
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     cc = np.array([tri_info[m]['cc'] for m in members[0]])
     r = np.array([tri_info[m]['r'] for m in members[0]])
@@ -247,8 +241,7 @@ Notice that the two natural neighbor triangle circumcenters are also vertices
 in the Voronoi plot (green dots), and the observations are in the polygons (blue dots).
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     vor = Voronoi(list(zip(xp, yp)))
 
@@ -324,8 +317,7 @@ Put all of the generated polygon areas and their affiliated values in arrays.
 Calculate the total area of all of the generated polygons.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     areas = np.array([60.434, 448.296, 25.916, 70.647])
     values = np.array([0.064, 1.156, 2.809, 0.225])
@@ -348,8 +340,7 @@ Calculate the total area of all of the generated polygons.
 For each polygon area, calculate its percent of total area.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     proportions = areas / total_area
     print(proportions)
@@ -370,8 +361,7 @@ For each polygon area, calculate its percent of total area.
 Multiply the percent of total area by the respective values.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     contributions = proportions * values
     print(contributions)
@@ -392,8 +382,7 @@ Multiply the percent of total area by the respective values.
 The sum of this array is the interpolation value!
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     interpolation_value = np.sum(contributions)
     function_output = natural_neighbor_point(xp, yp, zp, (sim_gridx[0], sim_gridy[0]), tri,
@@ -418,8 +407,7 @@ The values are slightly different due to truncating the area values in
 the above visual example to the 3rd decimal place.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     plt.show()
 
@@ -428,7 +416,10 @@ the above visual example to the 3rd decimal place.
 
 
 
-**Total running time of the script:** ( 0 minutes  0.107 seconds)
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  1.171 seconds)
 
 
 .. _sphx_glr_download_examples_gridding_Natural_Neighbor_Verification.py:

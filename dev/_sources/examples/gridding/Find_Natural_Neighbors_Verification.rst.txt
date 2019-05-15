@@ -16,8 +16,7 @@ A triangle is a natural neighbor of a point if that point is within a circumradi
 circumcenter of a circumscribed circle containing the triangle.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     import matplotlib.pyplot as plt
     import numpy as np
@@ -62,8 +61,7 @@ Since point 4 is far away from the triangulation, it has no natural neighbors.
 Point 3 is at the confluence of several triangles so it has many natural neighbors.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     neighbors, tri_info = find_natural_neighbors(tri, test_points)
     print(neighbors)
@@ -88,8 +86,7 @@ structure. 'cc' is that triangle's circumcenter, and 'r' is the radius of the ci
 containing that triangle.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     fig, ax = plt.subplots(figsize=(15, 10))
     for i, inds in enumerate(tri.simplices):
@@ -118,7 +115,10 @@ containing that triangle.
 
 
 
-**Total running time of the script:** ( 0 minutes  0.218 seconds)
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  0.982 seconds)
 
 
 .. _sphx_glr_download_examples_gridding_Find_Natural_Neighbors_Verification.py:

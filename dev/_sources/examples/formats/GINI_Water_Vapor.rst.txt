@@ -14,8 +14,7 @@ Use MetPy's support for GINI files to read in a water vapor satellite image and 
 data using CartoPy.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     import cartopy.feature as cfeature
     import matplotlib.pyplot as plt
@@ -32,7 +31,7 @@ data using CartoPy.
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # Open the GINI file from the test data
@@ -63,8 +62,7 @@ handle parsing some netCDF Climate and Forecasting (CF) metadata to simplify wor
 projections.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     ds = xr.open_dataset(f)
     x = ds.variables['x'][:]
@@ -81,8 +79,7 @@ Plot the image. We use MetPy's xarray/cartopy integration to automatically handl
 the projection information.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     fig = plt.figure(figsize=(10, 12))
     add_metpy_logo(fig, 125, 145)
@@ -104,7 +101,10 @@ the projection information.
 
 
 
-**Total running time of the script:** ( 0 minutes  0.859 seconds)
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  1.734 seconds)
 
 
 .. _sphx_glr_download_examples_formats_GINI_Water_Vapor.py:

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Level3File &mdash; MetPy 0.9</title>
+  <title>Level3File &mdash; MetPy 0.10</title>
   
 
   
@@ -43,7 +43,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="MetPy 0.9" href="../../index.html"/>
+    <link rel="top" title="MetPy 0.10" href="../../index.html"/>
         <link rel="up" title="io" href="metpy.io.html"/>
         <link rel="next" title="cdm" href="metpy.io.cdm.html"/>
         <link rel="prev" title="Level2File" href="metpy.io.Level2File.html"/> 
@@ -81,7 +81,7 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>0.9</option>
+                      <option value=''>0.10</option>
                       
                         
                           <option value="../latest">latest</option>
@@ -143,6 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="metpy.gridding.html">gridding</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">MetPy Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gempak.html">GEMPAK Conversion Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributors Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../infrastructureguide.html">Infrastructure Guide</a></li>
@@ -232,260 +233,218 @@ products in the wild.</p>
 <dt id="metpy.io.Level3File.metadata">
 <code class="descname">metadata</code><a class="headerlink" href="#metpy.io.Level3File.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Various general metadata available from the product</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.7)">dict</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.7)">dict</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.header">
 <code class="descname">header</code><a class="headerlink" href="#metpy.io.Level3File.header" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decoded product header</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">namedtuple</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>namedtuple</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.prod_desc">
 <code class="descname">prod_desc</code><a class="headerlink" href="#metpy.io.Level3File.prod_desc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decoded product description block</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">namedtuple</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>namedtuple</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.siteID">
 <code class="descname">siteID</code><a class="headerlink" href="#metpy.io.Level3File.siteID" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the site found in the header, empty string if none found</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.lat">
 <code class="descname">lat</code><a class="headerlink" href="#metpy.io.Level3File.lat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Radar site latitude</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.lon">
 <code class="descname">lon</code><a class="headerlink" href="#metpy.io.Level3File.lon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Radar site longitude</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.height">
 <code class="descname">height</code><a class="headerlink" href="#metpy.io.Level3File.height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Radar site height AMSL</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.product_name">
 <code class="descname">product_name</code><a class="headerlink" href="#metpy.io.Level3File.product_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the product contained in file</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.max_range">
 <code class="descname">max_range</code><a class="headerlink" href="#metpy.io.Level3File.max_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum range of the product, taken from the NIDS ICD</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.map_data">
 <code class="descname">map_data</code><a class="headerlink" href="#metpy.io.Level3File.map_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class instance mapping data int values to proper floating point values</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">Mapper</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Mapper</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.sym_block">
 <code class="descname">sym_block</code><a class="headerlink" href="#metpy.io.Level3File.sym_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>Any symbology block packets that were found</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>, optional</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>, optional</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.tab_pages">
 <code class="descname">tab_pages</code><a class="headerlink" href="#metpy.io.Level3File.tab_pages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Any tabular pages that were found</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>, optional</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>, optional</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="metpy.io.Level3File.graph_pages">
 <code class="descname">graph_pages</code><a class="headerlink" href="#metpy.io.Level3File.graph_pages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Any graphical pages that were found</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>, optional</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>, optional</p>
+</dd>
+</dl>
 </dd></dl>
 
 <p class="rubric">Notes</p>
 <p>The internal data structure that things are decoded into is still to be
 determined.</p>
 <p>Create instance of <a class="reference internal" href="#metpy.io.Level3File" title="metpy.io.Level3File"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Level3File</span></code></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>file-like object</em>) – If str, the name of the file to be opened. If file-like object,
-this will be read from directly.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>file-like object</em>) – If str, the name of the file to be opened. If file-like object,
+this will be read from directly.</p>
+</dd>
+</dl>
 <p class="rubric">Attributes Summary</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.Level3File.additional_gsm_fmt" title="metpy.io.Level3File.additional_gsm_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">additional_gsm_fmt</span></code></a></td>
-<td></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.Level3File.additional_gsm_fmt" title="metpy.io.Level3File.additional_gsm_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">additional_gsm_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.Level3File.graph_block_fmt" title="metpy.io.Level3File.graph_block_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graph_block_fmt</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.Level3File.graph_block_fmt" title="metpy.io.Level3File.graph_block_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graph_block_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.Level3File.gsm_fmt" title="metpy.io.Level3File.gsm_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gsm_fmt</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.Level3File.gsm_fmt" title="metpy.io.Level3File.gsm_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gsm_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.Level3File.header_fmt" title="metpy.io.Level3File.header_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">header_fmt</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.Level3File.header_fmt" title="metpy.io.Level3File.header_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">header_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.Level3File.ij_to_km" title="metpy.io.Level3File.ij_to_km"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ij_to_km</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.Level3File.ij_to_km" title="metpy.io.Level3File.ij_to_km"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ij_to_km</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.Level3File.packet_map" title="metpy.io.Level3File.packet_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">packet_map</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.Level3File.packet_map" title="metpy.io.Level3File.packet_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">packet_map</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.Level3File.prod_desc_fmt" title="metpy.io.Level3File.prod_desc_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod_desc_fmt</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.Level3File.prod_desc_fmt" title="metpy.io.Level3File.prod_desc_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod_desc_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.Level3File.prod_spec_map" title="metpy.io.Level3File.prod_spec_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod_spec_map</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.Level3File.prod_spec_map" title="metpy.io.Level3File.prod_spec_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod_spec_map</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.Level3File.standalone_tabular" title="metpy.io.Level3File.standalone_tabular"><code class="xref py py-obj docutils literal notranslate"><span class="pre">standalone_tabular</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.Level3File.standalone_tabular" title="metpy.io.Level3File.standalone_tabular"><code class="xref py py-obj docutils literal notranslate"><span class="pre">standalone_tabular</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.Level3File.sym_block_fmt" title="metpy.io.Level3File.sym_block_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sym_block_fmt</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.Level3File.sym_block_fmt" title="metpy.io.Level3File.sym_block_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sym_block_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.Level3File.sym_layer_fmt" title="metpy.io.Level3File.sym_layer_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sym_layer_fmt</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.Level3File.sym_layer_fmt" title="metpy.io.Level3File.sym_layer_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sym_layer_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.Level3File.tab_block_fmt" title="metpy.io.Level3File.tab_block_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tab_block_fmt</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.Level3File.tab_block_fmt" title="metpy.io.Level3File.tab_block_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tab_block_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.Level3File.tab_header_fmt" title="metpy.io.Level3File.tab_header_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tab_header_fmt</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.Level3File.tab_header_fmt" title="metpy.io.Level3File.tab_header_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tab_header_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.Level3File.wmo_finder" title="metpy.io.Level3File.wmo_finder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wmo_finder</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.Level3File.wmo_finder" title="metpy.io.Level3File.wmo_finder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wmo_finder</span></code></a></p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Summary</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.Level3File.__init__" title="metpy.io.Level3File.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(filename)</td>
-<td>Create instance of <a class="reference internal" href="#metpy.io.Level3File" title="metpy.io.Level3File"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Level3File</span></code></a>.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.Level3File.__init__" title="metpy.io.Level3File.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(filename)</p></td>
+<td><p>Create instance of <a class="reference internal" href="#metpy.io.Level3File" title="metpy.io.Level3File"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Level3File</span></code></a>.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.Level3File.pos_scale" title="metpy.io.Level3File.pos_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pos_scale</span></code></a>(is_sym_block)</td>
-<td>Scale of the position information in km.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.Level3File.pos_scale" title="metpy.io.Level3File.pos_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pos_scale</span></code></a>(is_sym_block)</p></td>
+<td><p>Scale of the position information in km.</p></td>
 </tr>
 </tbody>
 </table>
@@ -565,15 +524,12 @@ this will be read from directly.</td>
 <dt id="metpy.io.Level3File.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/metpy/io/nexrad.html#Level3File.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#metpy.io.Level3File.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create instance of <a class="reference internal" href="#metpy.io.Level3File" title="metpy.io.Level3File"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Level3File</span></code></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>file-like object</em>) – If str, the name of the file to be opened. If file-like object,
-this will be read from directly.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>file-like object</em>) – If str, the name of the file to be opened. If file-like object,
+this will be read from directly.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -586,9 +542,9 @@ this will be read from directly.</td>
 
 <div class="section" id="examples-using-metpy-io-level3file">
 <h2>Examples using <code class="docutils literal notranslate"><span class="pre">metpy.io.Level3File</span></code><a class="headerlink" href="#examples-using-metpy-io-level3file" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="Use MetPy to read information from a NEXRAD Level 3 (NIDS product) file and plot "><div class="figure" id="id1">
+<div class="sphx-glr-thumbcontainer" tooltip="Use MetPy to read information from a NEXRAD Level 3 (NIDS product) file and plot "><div class="figure align-center" id="id1">
 <img alt="../../_images/sphx_glr_NEXRAD_Level_3_File_thumb.png" src="../../_images/sphx_glr_NEXRAD_Level_3_File_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../examples/formats/NEXRAD_Level_3_File.html#sphx-glr-examples-formats-nexrad-level-3-file-py"><span class="std std-ref">NEXRAD Level 3 File</span></a></span></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../examples/formats/NEXRAD_Level_3_File.html#sphx-glr-examples-formats-nexrad-level-3-file-py"><span class="std std-ref">NEXRAD Level 3 File</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div><div style='clear:both'></div></div>
 </div>
@@ -615,8 +571,8 @@ this will be read from directly.</td>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, MetPy Developers.
-      Last updated on Jan 06, 2019 at 02:18:28.
+        &copy; Copyright 2019, MetPy Developers.
+      Last updated on May 15, 2019 at 21:22:50.
 
     </p>
   </div>
@@ -653,7 +609,7 @@ this will be read from directly.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.9.1+87.gcee9d4d',
+            VERSION:'0.10.0+42.g11226cc',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

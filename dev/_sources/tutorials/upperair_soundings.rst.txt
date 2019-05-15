@@ -19,8 +19,7 @@ forecasting, checkout `this <https://homes.comet.ucar.edu/~alanbol/aws-tr-79-006
 air weather service guide.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
 
@@ -47,8 +46,7 @@ Upper air data can be obtained using the siphon package, but for this tutorial w
 some of MetPy's sample data. This event is the Veterans Day tornado outbreak in 2002.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     col_names = ['pressure', 'height', 'temperature', 'dewpoint', 'direction', 'speed']
@@ -70,7 +68,7 @@ some of MetPy's sample data. This event is the Veterans Day tornado outbreak in 
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # We will pull the data out of the example dataset into individual variables and
@@ -102,8 +100,7 @@ sounding. The MetPy calc module has many such calculations already implemented!
   reaching the LCL, then rising moist adiabatially.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # Calculate the LCL
@@ -153,8 +150,7 @@ These lines perform the following tasks:
    components.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # Create a new figure. The dimensions here give a good aspect ratio
@@ -187,8 +183,7 @@ useful when performing further analysis on the Skew-T diagram. Often the
 0C isotherm is emphasized and areas of CAPE and CIN are shaded.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # Create a new figure. The dimensions here give a good aspect ratio
@@ -243,8 +238,7 @@ The line plotted on the hodograph is a line connecting the tips of these vectors
 which are not drawn.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # Create a new figure. The dimensions here give a good aspect ratio
@@ -296,7 +290,10 @@ which are not drawn.
 
 
 
-**Total running time of the script:** ( 0 minutes  1.163 seconds)
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  2.401 seconds)
 
 
 .. _sphx_glr_download_tutorials_upperair_soundings.py:

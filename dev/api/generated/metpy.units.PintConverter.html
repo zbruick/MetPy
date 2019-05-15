@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PintConverter &mdash; MetPy 0.9</title>
+  <title>PintConverter &mdash; MetPy 0.10</title>
   
 
   
@@ -43,7 +43,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="MetPy 0.9" href="../../index.html"/>
+    <link rel="top" title="MetPy 0.10" href="../../index.html"/>
         <link rel="up" title="units" href="metpy.units.html"/>
         <link rel="next" title="DimensionalityError" href="metpy.units.DimensionalityError.html"/>
         <link rel="prev" title="PintAxisInfo" href="metpy.units.PintAxisInfo.html"/> 
@@ -81,7 +81,7 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>0.9</option>
+                      <option value=''>0.10</option>
                       
                         
                           <option value="../latest">latest</option>
@@ -147,6 +147,7 @@
 <li class="toctree-l2"><a class="reference internal" href="metpy.gridding.html">gridding</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">MetPy Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gempak.html">GEMPAK Conversion Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributors Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../infrastructureguide.html">Infrastructure Guide</a></li>
@@ -231,26 +232,26 @@
 <dd><p>Implement support for pint within matplotlib’s unit conversion framework.</p>
 <p>Initialize converter for pint units.</p>
 <p class="rubric">Methods Summary</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.units.PintConverter.__init__" title="metpy.units.PintConverter.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(registry)</td>
-<td>Initialize converter for pint units.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.units.PintConverter.__init__" title="metpy.units.PintConverter.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(registry)</p></td>
+<td><p>Initialize converter for pint units.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.units.PintConverter.axisinfo" title="metpy.units.PintConverter.axisinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axisinfo</span></code></a>(unit,&nbsp;axis)</td>
-<td>Return axis information for this particular unit.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.units.PintConverter.axisinfo" title="metpy.units.PintConverter.axisinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axisinfo</span></code></a>(unit, axis)</p></td>
+<td><p>Return axis information for this particular unit.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.units.PintConverter.convert" title="metpy.units.PintConverter.convert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert</span></code></a>(value,&nbsp;unit,&nbsp;axis)</td>
-<td>Convert :<em class="xref py py-obj">Quantity</em> instances for matplotlib to use.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.units.PintConverter.convert" title="metpy.units.PintConverter.convert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert</span></code></a>(value, unit, axis)</p></td>
+<td><p>Convert :<em class="xref py py-obj">Quantity</em> instances for matplotlib to use.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.units.PintConverter.default_units" title="metpy.units.PintConverter.default_units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_units</span></code></a>(x,&nbsp;axis)</td>
-<td>Get the default unit to use for the given combination of unit and axis.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.units.PintConverter.default_units" title="metpy.units.PintConverter.default_units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_units</span></code></a>(x, axis)</p></td>
+<td><p>Get the default unit to use for the given combination of unit and axis.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.units.PintConverter.is_numlike" title="metpy.units.PintConverter.is_numlike"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_numlike</span></code></a>(x)</td>
-<td>The Matplotlib datalim, autoscaling, locators etc work with scalars which are the units converted to floats given the current unit.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.units.PintConverter.is_numlike" title="metpy.units.PintConverter.is_numlike"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_numlike</span></code></a>(x)</p></td>
+<td><p>The Matplotlib datalim, autoscaling, locators etc work with scalars which are the units converted to floats given the current unit.</p></td>
 </tr>
 </tbody>
 </table>
@@ -314,8 +315,8 @@ arrays of them, even when units are set.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, MetPy Developers.
-      Last updated on Jan 06, 2019 at 02:18:28.
+        &copy; Copyright 2019, MetPy Developers.
+      Last updated on May 15, 2019 at 21:22:50.
 
     </p>
   </div>
@@ -352,7 +353,7 @@ arrays of them, even when units are set.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.9.1+87.gcee9d4d',
+            VERSION:'0.10.0+42.g11226cc',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

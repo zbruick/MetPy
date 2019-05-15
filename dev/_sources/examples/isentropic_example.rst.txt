@@ -15,8 +15,7 @@ The MetPy function `mpcalc.isentropic_interpolation` allows for isentropic analy
 analysis data in isobaric coordinates.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
     import cartopy.crs as ccrs
     import cartopy.feature as cfeature
@@ -42,8 +41,7 @@ for Environmental Information (https://www.ncdc.noaa.gov/data-access/model-data)
 will be used.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     data = xr.open_dataset(get_test_data('narr_example.nc', False))
@@ -55,7 +53,7 @@ will be used.
 
 
 
-.. code-block:: python
+.. code-block:: default
 
     print(list(data.variables))
 
@@ -76,8 +74,7 @@ We will reduce the dimensionality of the data as it is pulled in to remove an em
 dimension.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # Assign data to variable names
@@ -105,8 +102,7 @@ To properly interpolate to isentropic coordinates, the function must know the de
 isentropic levels. An array with these levels will be created below.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     isentlevs = [296.] * units.kelvin
@@ -126,8 +122,7 @@ levels, and temperature be input. Any additional inputs (in this case relative h
 and v wind components) will be linearly interpolated to isentropic space.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     isent_anal = mpcalc.isentropic_interpolation(isentlevs,
@@ -149,8 +144,7 @@ The output is a list, so now we will separate the variables to different names b
 plotting.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     isentprs, isenttmp, isentspech, isentu, isentv, isenthgt = isent_anal
@@ -167,8 +161,7 @@ A quick look at the shape of these variables will show that the data is now in i
 coordinates, with the number of vertical levels as specified above.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     print(isentprs.shape)
@@ -202,8 +195,7 @@ The NARR only gives specific humidity on isobaric vertical levels, so relative h
 have to be calculated after the interpolation to isentropic space.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     isentrh = 100 * mpcalc.relative_humidity_from_specific_humidity(isentspech, isenttmp, isentprs)
@@ -217,8 +209,7 @@ have to be calculated after the interpolation to isentropic space.
 **Plotting the Isentropic Analysis**
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # Set up our projection
@@ -276,8 +267,7 @@ gradient is proportional to the geostrophic wind in isentropic space. This can b
 calculated with `mpcalc.montgomery_streamfunction`.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
 
@@ -328,7 +318,10 @@ calculated with `mpcalc.montgomery_streamfunction`.
 
 
 
-**Total running time of the script:** ( 0 minutes  13.382 seconds)
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  15.740 seconds)
 
 
 .. _sphx_glr_download_examples_isentropic_example.py:

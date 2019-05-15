@@ -19,8 +19,7 @@ support is currently available in a limited fashion, but should be improved in f
 versions.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     import cartopy.crs as ccrs
@@ -49,8 +48,7 @@ tutorial, we will use an example subset of GFS data from Hurrican Irma (Septembe
 2017).
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # Open the netCDF file as a xarray Dataset
@@ -113,8 +111,7 @@ coordinate information following the CF conventions. For this, we use the
 Additionally, we rename our data variables for easier reference.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # To parse the full dataset, we can call parse_cf without an argument, and assign the returned
@@ -150,8 +147,7 @@ convert the the data from one unit to another (keeping it as a DataArray). For n
 just use ``convert_units`` to convert our temperature to ``degC``.
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     data['temperature'].metpy.convert_units('degC')
@@ -184,8 +180,7 @@ The valid coordinate types are:
 (Both approaches and all four types are shown below)
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # Get multiple coordinates (for example, in just the x and y direction)
@@ -223,8 +218,7 @@ mentioned above as aliases for the coordinates. And so, if we wanted 850 hPa hei
 we would take:
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     print(data['height'].metpy.sel(vertical=850 * units.hPa))
@@ -289,7 +283,6 @@ we would take:
 For full details on xarray indexing/selection, see
 `xarray's documentation <http://xarray.pydata.org/en/stable/indexing.html>`_.
 
-
 Projections
 -----------
 
@@ -297,8 +290,7 @@ Getting the cartopy coordinate reference system (CRS) of the projection of a Dat
 straightforward as using the ``data_var.metpy.cartopy_crs`` property:
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     data_crs = data['temperature'].metpy.cartopy_crs
@@ -314,15 +306,14 @@ straightforward as using the ``data_var.metpy.cartopy_crs`` property:
 
  .. code-block:: none
 
-    <cartopy.crs.PlateCarree object at 0x7ff9d64e4e08>
+    <cartopy.crs.PlateCarree object at 0x7f6f8959ca98>
 
 
 The cartopy ``Globe`` can similarly be accessed via the ``data_var.metpy.cartopy_globe``
 property:
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     data_globe = data['temperature'].metpy.cartopy_globe
@@ -338,7 +329,7 @@ property:
 
  .. code-block:: none
 
-    <cartopy._crs.Globe object at 0x7ff9d8c63e48>
+    <cartopy._crs.Globe object at 0x7f6f89083828>
 
 
 Calculations
@@ -355,8 +346,7 @@ keep in mind that because the calculations are working with unit arrays and not 
 As an example, we calculate geostropic wind at 500 hPa below:
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     lat, lon = xr.broadcast(y, x)
@@ -398,14 +388,12 @@ can accept *and* return xarray objects). Right now, this includes
 More details can be found by looking at the documentation for the specific function of
 interest.
 
-
 There is also the special case of the helper function, ``grid_deltas_from_dataarray``, which
 takes a ``DataArray`` input, but returns unit arrays for use in other calculations. We could
 rewrite the above geostrophic wind example using this helper function as follows:
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     heights = data['height'].metpy.loc[{'time': time[0], 'vertical': 500. * units.hPa}]
@@ -442,8 +430,7 @@ the data.
 <http://xarray.pydata.org/en/stable/plotting.html>`_.)
 
 
-
-.. code-block:: python
+.. code-block:: default
 
 
     # A very simple example example of a plot of 500 hPa heights
@@ -460,7 +447,7 @@ the data.
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # Let's add a projection and coastlines to it
@@ -480,7 +467,7 @@ the data.
 
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     # Or, let's make a full 500 hPa map with heights, temperature, winds, and humidity
@@ -647,7 +634,9 @@ Fix 2 (unit array broadcasting):
 
 
 
-**Total running time of the script:** ( 0 minutes  1.764 seconds)
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  16.596 seconds)
 
 
 .. _sphx_glr_download_tutorials_xarray_tutorial.py:

@@ -15,7 +15,6 @@ data on a map using CartoPy.
 
 
 
-
 .. image:: /examples/images/sphx_glr_XArray_Projections_001.png
     :class: sphx-glr-single-img
 
@@ -23,7 +22,7 @@ data on a map using CartoPy.
 
 
 
-.. code-block:: python
+.. code-block:: default
 
     import cartopy.feature as cfeature
     import matplotlib.pyplot as plt
@@ -50,7 +49,10 @@ data on a map using CartoPy.
 
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  1.418 seconds)
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  13.032 seconds)
 
 
 .. _sphx_glr_download_examples_XArray_Projections.py:

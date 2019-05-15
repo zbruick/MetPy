@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Plot2D &mdash; MetPy 0.9</title>
+  <title>Plot2D &mdash; MetPy 0.10</title>
   
 
   
@@ -43,7 +43,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="MetPy 0.9" href="../../index.html"/>
+    <link rel="top" title="MetPy 0.10" href="../../index.html"/>
         <link rel="up" title="plots" href="metpy.plots.html"/>
         <link rel="next" title="SkewT" href="metpy.plots.SkewT.html"/>
         <link rel="prev" title="PanelContainer" href="metpy.plots.PanelContainer.html"/> 
@@ -81,7 +81,7 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>0.9</option>
+                      <option value=''>0.10</option>
                       
                         
                           <option value="../latest">latest</option>
@@ -150,6 +150,7 @@
 <li class="toctree-l2"><a class="reference internal" href="metpy.gridding.html">gridding</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">MetPy Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gempak.html">GEMPAK Conversion Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributors Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../infrastructureguide.html">Infrastructure Guide</a></li>
@@ -233,119 +234,119 @@
 <em class="property">class </em><code class="descclassname">metpy.plots.</code><code class="descname">Plot2D</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/metpy/plots/declarative.html#Plot2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#metpy.plots.Plot2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represent plots of 2D data.</p>
 <p class="rubric">Attributes Summary</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.colormap" title="metpy.plots.Plot2D.colormap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">colormap</span></code></a></td>
-<td>A trait for unicode strings.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.colormap" title="metpy.plots.Plot2D.colormap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">colormap</span></code></a></p></td>
+<td><p>A trait for unicode strings.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.cross_validation_lock" title="metpy.plots.Plot2D.cross_validation_lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cross_validation_lock</span></code></a></td>
-<td>A contextmanager for running a block with our cross validation lock set to True.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.cross_validation_lock" title="metpy.plots.Plot2D.cross_validation_lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cross_validation_lock</span></code></a></p></td>
+<td><p>A contextmanager for running a block with our cross validation lock set to True.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.data" title="metpy.plots.Plot2D.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></a></td>
-<td>Access the current data subset.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.data" title="metpy.plots.Plot2D.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></a></p></td>
+<td><p>Access the current data subset.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.field" title="metpy.plots.Plot2D.field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">field</span></code></a></td>
-<td>A trait for unicode strings.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.field" title="metpy.plots.Plot2D.field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">field</span></code></a></p></td>
+<td><p>A trait for unicode strings.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.griddata" title="metpy.plots.Plot2D.griddata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">griddata</span></code></a></td>
-<td>Return the internal cached data.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.griddata" title="metpy.plots.Plot2D.griddata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">griddata</span></code></a></p></td>
+<td><p>Return the internal cached data.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.image_range" title="metpy.plots.Plot2D.image_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image_range</span></code></a></td>
-<td>A trait type representing a Union type.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.image_range" title="metpy.plots.Plot2D.image_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image_range</span></code></a></p></td>
+<td><p>A trait type representing a Union type.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.level" title="metpy.plots.Plot2D.level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">level</span></code></a></td>
-<td>A trait type representing a Union type.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.level" title="metpy.plots.Plot2D.level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">level</span></code></a></p></td>
+<td><p>A trait type representing a Union type.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.name" title="metpy.plots.Plot2D.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></td>
-<td>Generate a name for the plot.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.name" title="metpy.plots.Plot2D.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p>Generate a name for the plot.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.parent" title="metpy.plots.Plot2D.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a></td>
-<td>A trait whose value must be an instance of a specified class.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.parent" title="metpy.plots.Plot2D.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a></p></td>
+<td><p>A trait whose value must be an instance of a specified class.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.plotdata" title="metpy.plots.Plot2D.plotdata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotdata</span></code></a></td>
-<td>Return the data for plotting.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.plotdata" title="metpy.plots.Plot2D.plotdata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotdata</span></code></a></p></td>
+<td><p>Return the data for plotting.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.time" title="metpy.plots.Plot2D.time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time</span></code></a></td>
-<td>A trait whose value must be an instance of a specified class.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.time" title="metpy.plots.Plot2D.time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time</span></code></a></p></td>
+<td><p>A trait whose value must be an instance of a specified class.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Summary</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.__init__" title="metpy.plots.Plot2D.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td>Initialize self.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.__init__" title="metpy.plots.Plot2D.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Initialize self.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.add_traits" title="metpy.plots.Plot2D.add_traits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_traits</span></code></a>(**traits)</td>
-<td>Dynamically add trait attributes to the HasTraits instance.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.add_traits" title="metpy.plots.Plot2D.add_traits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_traits</span></code></a>(**traits)</p></td>
+<td><p>Dynamically add trait attributes to the HasTraits instance.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.class_own_trait_events" title="metpy.plots.Plot2D.class_own_trait_events"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class_own_trait_events</span></code></a>(name)</td>
-<td>Get a dict of all event handlers defined on this class, not a parent.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.class_own_trait_events" title="metpy.plots.Plot2D.class_own_trait_events"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class_own_trait_events</span></code></a>(name)</p></td>
+<td><p>Get a dict of all event handlers defined on this class, not a parent.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.class_own_traits" title="metpy.plots.Plot2D.class_own_traits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class_own_traits</span></code></a>(**metadata)</td>
-<td>Get a dict of all the traitlets defined on this class, not a parent.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.class_own_traits" title="metpy.plots.Plot2D.class_own_traits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class_own_traits</span></code></a>(**metadata)</p></td>
+<td><p>Get a dict of all the traitlets defined on this class, not a parent.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.class_trait_names" title="metpy.plots.Plot2D.class_trait_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class_trait_names</span></code></a>(**metadata)</td>
-<td>Get a list of all the names of this class’ traits.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.class_trait_names" title="metpy.plots.Plot2D.class_trait_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class_trait_names</span></code></a>(**metadata)</p></td>
+<td><p>Get a list of all the names of this class’ traits.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.class_traits" title="metpy.plots.Plot2D.class_traits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class_traits</span></code></a>(**metadata)</td>
-<td>Get a <code class="docutils literal notranslate"><span class="pre">dict</span></code> of all the traits of this class.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.class_traits" title="metpy.plots.Plot2D.class_traits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class_traits</span></code></a>(**metadata)</p></td>
+<td><p>Get a <code class="docutils literal notranslate"><span class="pre">dict</span></code> of all the traits of this class.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.clear" title="metpy.plots.Plot2D.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</td>
-<td>Clear the plot.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.clear" title="metpy.plots.Plot2D.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</p></td>
+<td><p>Clear the plot.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.clear_handle" title="metpy.plots.Plot2D.clear_handle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_handle</span></code></a>()</td>
-<td>Clear the handle to the plot instance.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.clear_handle" title="metpy.plots.Plot2D.clear_handle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_handle</span></code></a>()</p></td>
+<td><p>Clear the handle to the plot instance.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.draw" title="metpy.plots.Plot2D.draw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw</span></code></a>()</td>
-<td>Draw the plot.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.draw" title="metpy.plots.Plot2D.draw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw</span></code></a>()</p></td>
+<td><p>Draw the plot.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.has_trait" title="metpy.plots.Plot2D.has_trait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_trait</span></code></a>(name)</td>
-<td>Returns True if the object has a trait with the specified name.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.has_trait" title="metpy.plots.Plot2D.has_trait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_trait</span></code></a>(name)</p></td>
+<td><p>Returns True if the object has a trait with the specified name.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.hold_trait_notifications" title="metpy.plots.Plot2D.hold_trait_notifications"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hold_trait_notifications</span></code></a>()</td>
-<td>Context manager for bundling trait change notifications and cross validation.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.hold_trait_notifications" title="metpy.plots.Plot2D.hold_trait_notifications"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hold_trait_notifications</span></code></a>()</p></td>
+<td><p>Context manager for bundling trait change notifications and cross validation.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.notify_change" title="metpy.plots.Plot2D.notify_change"><code class="xref py py-obj docutils literal notranslate"><span class="pre">notify_change</span></code></a>(change)</td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.notify_change" title="metpy.plots.Plot2D.notify_change"><code class="xref py py-obj docutils literal notranslate"><span class="pre">notify_change</span></code></a>(change)</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.observe" title="metpy.plots.Plot2D.observe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observe</span></code></a>(handler[,&nbsp;names,&nbsp;type])</td>
-<td>Setup a handler to be called when a trait changes.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.observe" title="metpy.plots.Plot2D.observe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observe</span></code></a>(handler[, names, type])</p></td>
+<td><p>Setup a handler to be called when a trait changes.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.on_trait_change" title="metpy.plots.Plot2D.on_trait_change"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_trait_change</span></code></a>([handler,&nbsp;name,&nbsp;remove])</td>
-<td>DEPRECATED: Setup a handler to be called when a trait changes.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.on_trait_change" title="metpy.plots.Plot2D.on_trait_change"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_trait_change</span></code></a>([handler, name, remove])</p></td>
+<td><p>DEPRECATED: Setup a handler to be called when a trait changes.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.set_trait" title="metpy.plots.Plot2D.set_trait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_trait</span></code></a>(name,&nbsp;value)</td>
-<td>Forcibly sets trait attribute, including read-only attributes.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.set_trait" title="metpy.plots.Plot2D.set_trait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_trait</span></code></a>(name, value)</p></td>
+<td><p>Forcibly sets trait attribute, including read-only attributes.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.setup_instance" title="metpy.plots.Plot2D.setup_instance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_instance</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td>This is called <strong>before</strong> self.__init__ is called.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.setup_instance" title="metpy.plots.Plot2D.setup_instance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_instance</span></code></a>(*args, **kwargs)</p></td>
+<td><p>This is called <strong>before</strong> self.__init__ is called.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.trait_events" title="metpy.plots.Plot2D.trait_events"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trait_events</span></code></a>([name])</td>
-<td>Get a <code class="docutils literal notranslate"><span class="pre">dict</span></code> of all the event handlers of this class.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.trait_events" title="metpy.plots.Plot2D.trait_events"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trait_events</span></code></a>([name])</p></td>
+<td><p>Get a <code class="docutils literal notranslate"><span class="pre">dict</span></code> of all the event handlers of this class.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.trait_metadata" title="metpy.plots.Plot2D.trait_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trait_metadata</span></code></a>(traitname,&nbsp;key[,&nbsp;default])</td>
-<td>Get metadata values for trait by key.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.trait_metadata" title="metpy.plots.Plot2D.trait_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trait_metadata</span></code></a>(traitname, key[, default])</p></td>
+<td><p>Get metadata values for trait by key.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.trait_names" title="metpy.plots.Plot2D.trait_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trait_names</span></code></a>(**metadata)</td>
-<td>Get a list of all the names of this class’ traits.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.trait_names" title="metpy.plots.Plot2D.trait_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trait_names</span></code></a>(**metadata)</p></td>
+<td><p>Get a list of all the names of this class’ traits.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.traits" title="metpy.plots.Plot2D.traits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">traits</span></code></a>(**metadata)</td>
-<td>Get a <code class="docutils literal notranslate"><span class="pre">dict</span></code> of all the traits of this class.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.traits" title="metpy.plots.Plot2D.traits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">traits</span></code></a>(**metadata)</p></td>
+<td><p>Get a <code class="docutils literal notranslate"><span class="pre">dict</span></code> of all the traits of this class.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.plots.Plot2D.unobserve" title="metpy.plots.Plot2D.unobserve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unobserve</span></code></a>(handler[,&nbsp;names,&nbsp;type])</td>
-<td>Remove a trait change handler.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.unobserve" title="metpy.plots.Plot2D.unobserve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unobserve</span></code></a>(handler[, names, type])</p></td>
+<td><p>Remove a trait change handler.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.plots.Plot2D.unobserve_all" title="metpy.plots.Plot2D.unobserve_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unobserve_all</span></code></a>([name])</td>
-<td>Remove trait change handlers of any type for the specified name.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.plots.Plot2D.unobserve_all" title="metpy.plots.Plot2D.unobserve_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unobserve_all</span></code></a>([name])</p></td>
+<td><p>Remove trait change handlers of any type for the specified name.</p></td>
 </tr>
 </tbody>
 </table>
@@ -520,12 +521,10 @@ All trait notifications will fire after all values have been assigned.</p>
 <code class="descname">observe</code><span class="sig-paren">(</span><em>handler</em>, <em>names=traitlets.All</em>, <em>type='change'</em><span class="sig-paren">)</span><a class="headerlink" href="#metpy.plots.Plot2D.observe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setup a handler to be called when a trait changes.</p>
 <p>This is used to setup dynamic notifications of trait changes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>handler</strong> (<em>callable</em>) – A callable that is called when a trait changes. Its
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>handler</strong> (<em>callable</em>) – A callable that is called when a trait changes. Its
 signature should be <code class="docutils literal notranslate"><span class="pre">handler(change)</span></code>, where <code class="docutils literal notranslate"><span class="pre">change</span></code> is a
 dictionary. The change dictionary at least holds a ‘type’ key.
 * <code class="docutils literal notranslate"><span class="pre">type</span></code>: the type of notification.
@@ -534,17 +533,15 @@ case where type is ‘change’, we also have the following keys:
 * <code class="docutils literal notranslate"><span class="pre">owner</span></code> : the HasTraits instance
 * <code class="docutils literal notranslate"><span class="pre">old</span></code> : the old value of the modified trait attribute
 * <code class="docutils literal notranslate"><span class="pre">new</span></code> : the new value of the modified trait attribute
-* <code class="docutils literal notranslate"><span class="pre">name</span></code> : the name of the modified trait attribute.</li>
-<li><strong>names</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><em>All</em>) – If names is All, the handler will apply to all traits.  If a list
+* <code class="docutils literal notranslate"><span class="pre">name</span></code> : the name of the modified trait attribute.</p></li>
+<li><p><strong>names</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><em>All</em>) – If names is All, the handler will apply to all traits.  If a list
 of str, handler will apply to all names in the list.  If a
-str, the handler will apply just to that name.</li>
-<li><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><em>All</em><em> (</em><em>default: 'change'</em><em>)</em>) – The type of notification to filter by. If equal to All, then all
-notifications are passed to the observe handler.</li>
+str, the handler will apply just to that name.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><em>All</em><em> (</em><em>default: 'change'</em><em>)</em>) – The type of notification to filter by. If equal to All, then all
+notifications are passed to the observe handler.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -559,24 +556,20 @@ _a_changed(self, name, old, new) (fewer arguments can be used, see
 below).</p>
 <p>If <em class="xref py py-obj">remove</em> is True and <em class="xref py py-obj">handler</em> is not specified, all change
 handlers for the specified name are uninstalled.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>handler</strong> (<em>callable</em><em>, </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.7)"><em>None</em></a>) – A callable that is called when a trait changes.  Its
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>handler</strong> (<em>callable</em><em>, </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.7)"><em>None</em></a>) – A callable that is called when a trait changes.  Its
 signature can be handler(), handler(name), handler(name, new),
-handler(name, old, new), or handler(name, old, new, self).</li>
-<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.7)"><em>None</em></a>) – If None, the handler will apply to all traits.  If a list
+handler(name, old, new), or handler(name, old, new, self).</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.7)"><em>None</em></a>) – If None, the handler will apply to all traits.  If a list
 of str, handler will apply to all names in the list.  If a
-str, the handler will apply just to that name.</li>
-<li><strong>remove</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – If False (the default), then install the handler.  If True
-then unintall it.</li>
+str, the handler will apply just to that name.</p></li>
+<li><p><strong>remove</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – If False (the default), then install the handler.  If True
+then unintall it.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -595,17 +588,15 @@ then unintall it.</li>
 <dt id="metpy.plots.Plot2D.trait_events">
 <em class="property">classmethod </em><code class="descname">trait_events</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#metpy.plots.Plot2D.trait_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a <code class="docutils literal notranslate"><span class="pre">dict</span></code> of all the event handlers of this class.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> (</em><em>default: None</em><em>)</em>) – The name of a trait of this class. If name is <code class="docutils literal notranslate"><span class="pre">None</span></code> then all
-the event handlers of this class will be returned instead.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><em>The event handlers associated with a trait name, or all event handlers.</em></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> (</em><em>default: None</em><em>)</em>) – The name of a trait of this class. If name is <code class="docutils literal notranslate"><span class="pre">None</span></code> then all
+the event handlers of this class will be returned instead.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>The event handlers associated with a trait name, or all event handlers.</em></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -640,22 +631,18 @@ to the function.</p>
 <code class="descname">unobserve</code><span class="sig-paren">(</span><em>handler</em>, <em>names=traitlets.All</em>, <em>type='change'</em><span class="sig-paren">)</span><a class="headerlink" href="#metpy.plots.Plot2D.unobserve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove a trait change handler.</p>
 <p>This is used to unregister handlers to trait change notifications.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>handler</strong> (<em>callable</em>) – The callable called when a trait attribute changes.</li>
-<li><strong>names</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><em>All</em><em> (</em><em>default: All</em><em>)</em>) – The names of the traits for which the specified handler should be
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>handler</strong> (<em>callable</em>) – The callable called when a trait attribute changes.</p></li>
+<li><p><strong>names</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><em>All</em><em> (</em><em>default: All</em><em>)</em>) – The names of the traits for which the specified handler should be
 uninstalled. If names is All, the specified handler is uninstalled
-from the list of notifiers corresponding to all changes.</li>
-<li><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>All</em><em> (</em><em>default: 'change'</em><em>)</em>) – The type of notification to filter by. If All, the specified handler
-is uninstalled from the list of notifiers corresponding to all types.</li>
+from the list of notifiers corresponding to all changes.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>All</em><em> (</em><em>default: 'change'</em><em>)</em>) – The type of notification to filter by. If All, the specified handler
+is uninstalled from the list of notifiers corresponding to all types.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -691,8 +678,8 @@ If name is not specified, removes all trait notifiers.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, MetPy Developers.
-      Last updated on Jan 06, 2019 at 02:18:28.
+        &copy; Copyright 2019, MetPy Developers.
+      Last updated on May 15, 2019 at 21:22:50.
 
     </p>
   </div>
@@ -729,7 +716,7 @@ If name is not specified, removes all trait notifiers.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.9.1+87.gcee9d4d',
+            VERSION:'0.10.0+42.g11226cc',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

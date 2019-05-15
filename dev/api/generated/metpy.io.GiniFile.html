@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>GiniFile &mdash; MetPy 0.9</title>
+  <title>GiniFile &mdash; MetPy 0.10</title>
   
 
   
@@ -43,7 +43,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="MetPy 0.9" href="../../index.html"/>
+    <link rel="top" title="MetPy 0.10" href="../../index.html"/>
         <link rel="up" title="io" href="metpy.io.html"/>
         <link rel="next" title="Level2File" href="metpy.io.Level2File.html"/>
         <link rel="prev" title="is_precip_mode" href="metpy.io.is_precip_mode.html"/> 
@@ -81,7 +81,7 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>0.9</option>
+                      <option value=''>0.10</option>
                       
                         
                           <option value="../latest">latest</option>
@@ -143,6 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="metpy.gridding.html">gridding</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">MetPy Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gempak.html">GEMPAK Conversion Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributors Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../infrastructureguide.html">Infrastructure Guide</a></li>
@@ -230,111 +231,108 @@
 <p>The internal data structures that things are decoded into are subject to change. For
 a more stable interface, use the <a class="reference internal" href="#metpy.io.GiniFile.to_dataset" title="metpy.io.GiniFile.to_dataset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">to_dataset()</span></code></a> method.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#metpy.io.GiniFile.to_dataset" title="metpy.io.GiniFile.to_dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">GiniFile.to_dataset</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#metpy.io.GiniFile.to_dataset" title="metpy.io.GiniFile.to_dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">GiniFile.to_dataset</span></code></a></p>
 </div>
 <p>Create an instance of <a class="reference internal" href="#metpy.io.GiniFile" title="metpy.io.GiniFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GiniFile</span></code></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>file-like object</em>) – If str, the name of the file to be opened. Gzip-ed files are
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>file-like object</em>) – If str, the name of the file to be opened. Gzip-ed files are
 recognized with the extension <code class="docutils literal notranslate"><span class="pre">'.gz'</span></code>, as are bzip2-ed files with
 the extension <code class="docutils literal notranslate"><span class="pre">'.bz2'</span></code> If <em class="xref py py-obj">filename</em> is a file-like object,
-this will be read from directly.</td>
-</tr>
-</tbody>
-</table>
+this will be read from directly.</p>
+</dd>
+</dl>
 <p class="rubric">Attributes Summary</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.attrs" title="metpy.io.GiniFile.attrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attrs</span></code></a></td>
-<td></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.attrs" title="metpy.io.GiniFile.attrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attrs</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.channels" title="metpy.io.GiniFile.channels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">channels</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.channels" title="metpy.io.GiniFile.channels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">channels</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.crafts" title="metpy.io.GiniFile.crafts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crafts</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.crafts" title="metpy.io.GiniFile.crafts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crafts</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.dimensions" title="metpy.io.GiniFile.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.dimensions" title="metpy.io.GiniFile.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.lc_ps_fmt" title="metpy.io.GiniFile.lc_ps_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lc_ps_fmt</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.lc_ps_fmt" title="metpy.io.GiniFile.lc_ps_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lc_ps_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.mercator_fmt" title="metpy.io.GiniFile.mercator_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mercator_fmt</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.mercator_fmt" title="metpy.io.GiniFile.mercator_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mercator_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.missing" title="metpy.io.GiniFile.missing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">missing</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.missing" title="metpy.io.GiniFile.missing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">missing</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.nav_fmt" title="metpy.io.GiniFile.nav_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nav_fmt</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.nav_fmt" title="metpy.io.GiniFile.nav_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nav_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.prod_desc2_fmt" title="metpy.io.GiniFile.prod_desc2_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod_desc2_fmt</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.prod_desc2_fmt" title="metpy.io.GiniFile.prod_desc2_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod_desc2_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.prod_desc_fmt" title="metpy.io.GiniFile.prod_desc_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod_desc_fmt</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.prod_desc_fmt" title="metpy.io.GiniFile.prod_desc_fmt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod_desc_fmt</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.sectors" title="metpy.io.GiniFile.sectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sectors</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.sectors" title="metpy.io.GiniFile.sectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sectors</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.variables" title="metpy.io.GiniFile.variables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">variables</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.variables" title="metpy.io.GiniFile.variables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">variables</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.wmo_finder" title="metpy.io.GiniFile.wmo_finder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wmo_finder</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.wmo_finder" title="metpy.io.GiniFile.wmo_finder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wmo_finder</span></code></a></p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Summary</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.__init__" title="metpy.io.GiniFile.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(filename)</td>
-<td>Create an instance of <a class="reference internal" href="#metpy.io.GiniFile" title="metpy.io.GiniFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GiniFile</span></code></a>.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.__init__" title="metpy.io.GiniFile.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(filename)</p></td>
+<td><p>Create an instance of <a class="reference internal" href="#metpy.io.GiniFile" title="metpy.io.GiniFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GiniFile</span></code></a>.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.close" title="metpy.io.GiniFile.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.close" title="metpy.io.GiniFile.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.get" title="metpy.io.GiniFile.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(k[,d])</td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.get" title="metpy.io.GiniFile.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(k[,d])</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.get_attrs" title="metpy.io.GiniFile.get_attrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_attrs</span></code></a>()</td>
-<td>Get the global attributes.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.get_attrs" title="metpy.io.GiniFile.get_attrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_attrs</span></code></a>()</p></td>
+<td><p>Get the global attributes.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.get_dimensions" title="metpy.io.GiniFile.get_dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dimensions</span></code></a>()</td>
-<td>Get the file’s dimensions.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.get_dimensions" title="metpy.io.GiniFile.get_dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dimensions</span></code></a>()</p></td>
+<td><p>Get the file’s dimensions.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.get_encoding" title="metpy.io.GiniFile.get_encoding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_encoding</span></code></a>()</td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.get_encoding" title="metpy.io.GiniFile.get_encoding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_encoding</span></code></a>()</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.get_variables" title="metpy.io.GiniFile.get_variables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_variables</span></code></a>()</td>
-<td>Get all variables in the file.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.get_variables" title="metpy.io.GiniFile.get_variables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_variables</span></code></a>()</p></td>
+<td><p>Get all variables in the file.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.items" title="metpy.io.GiniFile.items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">items</span></code></a>()</td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.items" title="metpy.io.GiniFile.items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">items</span></code></a>()</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.keys" title="metpy.io.GiniFile.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code></a>()</td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.keys" title="metpy.io.GiniFile.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code></a>()</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.load" title="metpy.io.GiniFile.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>()</td>
-<td>Load the variables and attributes simultaneously.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.load" title="metpy.io.GiniFile.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>()</p></td>
+<td><p>Load the variables and attributes simultaneously.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#metpy.io.GiniFile.to_dataset" title="metpy.io.GiniFile.to_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataset</span></code></a>()</td>
-<td>Convert to a CDM dataset.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#metpy.io.GiniFile.to_dataset" title="metpy.io.GiniFile.to_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataset</span></code></a>()</p></td>
+<td><p>Convert to a CDM dataset.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#metpy.io.GiniFile.values" title="metpy.io.GiniFile.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></a>()</td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#metpy.io.GiniFile.values" title="metpy.io.GiniFile.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></a>()</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
@@ -409,17 +407,14 @@ this will be read from directly.</td>
 <dt id="metpy.io.GiniFile.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/metpy/io/gini.html#GiniFile.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#metpy.io.GiniFile.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an instance of <a class="reference internal" href="#metpy.io.GiniFile" title="metpy.io.GiniFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GiniFile</span></code></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>file-like object</em>) – If str, the name of the file to be opened. Gzip-ed files are
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em> or </em><em>file-like object</em>) – If str, the name of the file to be opened. Gzip-ed files are
 recognized with the extension <code class="docutils literal notranslate"><span class="pre">'.gz'</span></code>, as are bzip2-ed files with
 the extension <code class="docutils literal notranslate"><span class="pre">'.bz2'</span></code> If <em class="xref py py-obj">filename</em> is a file-like object,
-this will be read from directly.</td>
-</tr>
-</tbody>
-</table>
+this will be read from directly.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -436,14 +431,14 @@ this will be read from directly.</td>
 <dt id="metpy.io.GiniFile.get_attrs">
 <code class="descname">get_attrs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/metpy/io/gini.html#GiniFile.get_attrs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#metpy.io.GiniFile.get_attrs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the global attributes.</p>
-<p>This is used by <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.open_dataset.html#xarray.open_dataset" title="(in xarray v0.11.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xarray.open_dataset</span></code></a>.</p>
+<p>This is used by <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.open_dataset.html#xarray.open_dataset" title="(in xarray v0.12.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xarray.open_dataset</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="metpy.io.GiniFile.get_dimensions">
 <code class="descname">get_dimensions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/metpy/io/gini.html#GiniFile.get_dimensions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#metpy.io.GiniFile.get_dimensions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the file’s dimensions.</p>
-<p>This is used by <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.open_dataset.html#xarray.open_dataset" title="(in xarray v0.11.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xarray.open_dataset</span></code></a>.</p>
+<p>This is used by <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.open_dataset.html#xarray.open_dataset" title="(in xarray v0.12.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xarray.open_dataset</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -455,7 +450,7 @@ this will be read from directly.</td>
 <dt id="metpy.io.GiniFile.get_variables">
 <code class="descname">get_variables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/metpy/io/gini.html#GiniFile.get_variables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#metpy.io.GiniFile.get_variables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all variables in the file.</p>
-<p>This is used by <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.open_dataset.html#xarray.open_dataset" title="(in xarray v0.11.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xarray.open_dataset</span></code></a>.</p>
+<p>This is used by <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.open_dataset.html#xarray.open_dataset" title="(in xarray v0.12.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xarray.open_dataset</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -496,18 +491,15 @@ are requested, so care should be taken to make sure its fast.</p>
 <dd><p>Convert to a CDM dataset.</p>
 <p>Gives a representation of the data in a much more user-friendly manner, providing
 easy access to Variables and relevant attributes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
-<li><em>Dataset</em></li>
-<li><em>.. deprecated:: 0.8.0</em></li>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><em>Dataset</em></p></li>
+<li><p><em>.. deprecated:: 0.8.0</em></p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -519,13 +511,13 @@ easy access to Variables and relevant attributes.</p>
 
 <div class="section" id="examples-using-metpy-io-ginifile">
 <h2>Examples using <code class="docutils literal notranslate"><span class="pre">metpy.io.GiniFile</span></code><a class="headerlink" href="#examples-using-metpy-io-ginifile" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="Use MetPy&#x27;s support for GINI files to read in a water vapor satellite image and plot the data u..."><div class="figure" id="id1">
+<div class="sphx-glr-thumbcontainer" tooltip="Use MetPy&#x27;s support for GINI files to read in a water vapor satellite image and plot the data u..."><div class="figure align-center" id="id1">
 <img alt="../../_images/sphx_glr_GINI_Water_Vapor_thumb.png" src="../../_images/sphx_glr_GINI_Water_Vapor_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../examples/formats/GINI_Water_Vapor.html#sphx-glr-examples-formats-gini-water-vapor-py"><span class="std std-ref">GINI Water Vapor Imagery</span></a></span></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../examples/formats/GINI_Water_Vapor.html#sphx-glr-examples-formats-gini-water-vapor-py"><span class="std std-ref">GINI Water Vapor Imagery</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Demonstrate the use of MetPy&#x27;s simplified plotting interface."><div class="figure" id="id2">
+</div><div class="sphx-glr-thumbcontainer" tooltip="Demonstrate the use of MetPy&#x27;s simplified plotting interface."><div class="figure align-center" id="id2">
 <img alt="../../_images/sphx_glr_Simplified_Image_Plot_thumb.png" src="../../_images/sphx_glr_Simplified_Image_Plot_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../examples/plots/Simplified_Image_Plot.html#sphx-glr-examples-plots-simplified-image-plot-py"><span class="std std-ref">Simple Plotting</span></a></span></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../examples/plots/Simplified_Image_Plot.html#sphx-glr-examples-plots-simplified-image-plot-py"><span class="std std-ref">Simple Plotting</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div><div style='clear:both'></div></div>
 </div>
@@ -552,8 +544,8 @@ easy access to Variables and relevant attributes.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, MetPy Developers.
-      Last updated on Jan 06, 2019 at 02:18:28.
+        &copy; Copyright 2019, MetPy Developers.
+      Last updated on May 15, 2019 at 21:22:50.
 
     </p>
   </div>
@@ -590,7 +582,7 @@ easy access to Variables and relevant attributes.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.9.1+87.gcee9d4d',
+            VERSION:'0.10.0+42.g11226cc',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
