@@ -748,12 +748,12 @@ def lat_lon_grid_deltas(longitude, latitude, **kwargs):
 
     Parameters
     ----------
-    longitude : array_like
+    longitude : array-like
         array of longitudes defining the grid
-    latitude : array_like
+    latitude : array-like
         array of latitudes defining the grid
     kwargs
-        Other keyword arguments to pass to :class:`~pyproj.Geod`
+        Other keyword arguments to pass to `~pyproj.Geod`
 
     Returns
     -------

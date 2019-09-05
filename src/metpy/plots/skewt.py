@@ -347,9 +347,9 @@ class SkewT(object):
 
         Parameters
         ----------
-        p : array_like
+        p : array-like
             pressure values
-        t : array_like
+        t : array-like
             temperature values, can also be used for things like dew point
         args
             Other positional arguments to pass to :func:`~matplotlib.pyplot.plot`
@@ -380,11 +380,11 @@ class SkewT(object):
 
         Parameters
         ----------
-        p : array_like
+        p : array-like
             pressure values
-        u : array_like
+        u : array-like
             U (East-West) component of wind
-        v : array_like
+        v : array-like
             V (North-South) component of wind
         c:
             An optional array used to map colors to the barbs
@@ -452,11 +452,11 @@ class SkewT(object):
 
         Parameters
         ----------
-        t0 : array_like, optional
+        t0 : array-like, optional
             Starting temperature values in Kelvin. If none are given, they will be
             generated using the current temperature range at the bottom of
             the plot.
-        p : array_like, optional
+        p : array-like, optional
             Pressure values to be included in the dry adiabats. If not
             specified, they will be linearly distributed across the current
             plotted pressure range.
@@ -509,11 +509,11 @@ class SkewT(object):
 
         Parameters
         ----------
-        t0 : array_like, optional
+        t0 : array-like, optional
             Starting temperature values in Kelvin. If none are given, they will be
             generated using the current temperature range at the bottom of
             the plot.
-        p : array_like, optional
+        p : array-like, optional
             Pressure values to be included in the moist adiabats. If not
             specified, they will be linearly distributed across the current
             plotted pressure range.
@@ -566,10 +566,10 @@ class SkewT(object):
 
         Parameters
         ----------
-        w : array_like, optional
+        w : array-like, optional
             Unitless mixing ratio values to plot. If none are given, default
             values are used.
-        p : array_like, optional
+        p : array-like, optional
             Pressure values to be included in the isohumes. If not
             specified, they will be linearly distributed across the current
             plotted pressure range up to 600 mb.
@@ -618,11 +618,11 @@ class SkewT(object):
 
         Parameters
         ----------
-        y : array_like
+        y : array-like
             1-dimensional array of numeric y-values
-        x1 : array_like
+        x1 : array-like
             1-dimensional array of numeric x-values
-        x2 : array_like
+        x2 : array-like
             1-dimensional array of numeric x-values
         which : str
             Specifies if `positive`, `negative`, or `both` areas are being shaded.
@@ -673,11 +673,11 @@ class SkewT(object):
 
         Parameters
         ----------
-        p : array_like
+        p : array-like
             Pressure values
-        t : array_like
+        t : array-like
             Temperature values
-        t_parcel : array_like
+        t_parcel : array-like
             Parcel path temperature values
         kwargs
             Other keyword arguments to pass to :class:`matplotlib.collections.PolyCollection`
@@ -702,11 +702,11 @@ class SkewT(object):
 
         Parameters
         ----------
-        p : array_like
+        p : array-like
             Pressure values
-        t : array_like
+        t : array-like
             Temperature values
-        t_parcel : array_like
+        t_parcel : array-like
             Parcel path temperature values
         kwargs
             Other keyword arguments to pass to :class:`matplotlib.collections.PolyCollection`
@@ -820,9 +820,9 @@ class Hodograph(object):
 
         Parameters
         ----------
-        u : array_like
+        u : array-like
             u-component of wind
-        v : array_like
+        v : array-like
             v-component of wind
         kwargs
             Other keyword arguments to pass to :meth:`matplotlib.axes.Axes.plot`
@@ -848,9 +848,9 @@ class Hodograph(object):
 
         Parameters
         ----------
-        u : array_like
+        u : array-like
             u-component of wind
-        v : array_like
+        v : array-like
             v-component of wind
         kwargs
             Other keyword arguments to pass to :meth:`matplotlib.axes.Axes.quiver`
@@ -881,11 +881,11 @@ class Hodograph(object):
 
         Parameters
         ----------
-        u : array_like
+        u : array-like
             u-component of wind
-        v : array_like
+        v : array-like
             v-component of wind
-        c : array_like
+        c : array-like
             data to use for colormapping (e.g. heights, pressure, wind speed)
         intervals: array-like, optional
             Array of intervals for c to use in coloring the hodograph.

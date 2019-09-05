@@ -36,11 +36,11 @@ def remove_observations_below_value(x, y, z, val=0):
 
     Parameters
     ----------
-    x: array_like
+    x: array-like
         x coordinate.
-    y: array_like
+    y: array-like
         y coordinate.
-    z: array_like
+    z: array-like
         Observation value.
     val: float
         Value at which to threshold z.
@@ -67,11 +67,11 @@ def remove_nan_observations(x, y, z):
 
     Parameters
     ----------
-    x: array_like
+    x: array-like
         x coordinate
-    y: array_like
+    y: array-like
         y coordinate
-    z: array_like
+    z: array-like
         observation value
 
     Returns
@@ -96,11 +96,11 @@ def remove_repeat_coordinates(x, y, z):
 
     Parameters
     ----------
-    x: array_like
+    x: array-like
         x coordinate
-    y: array_like
+    y: array-like
         y coordinate
-    z: array_like
+    z: array-like
         observation value
 
     Returns

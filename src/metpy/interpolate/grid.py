@@ -25,9 +25,9 @@ def generate_grid(horiz_dim, bbox):
 
     Returns
     -------
-    grid_x: (X, Y) ndarray
+    grid_x: (X, Y) numpy.ndarray
         X dimension meshgrid defined by given bounding box
-    grid_y: (X, Y) ndarray
+    grid_y: (X, Y) numpy.ndarray
         Y dimension meshgrid defined by given bounding box
 
     """
@@ -53,7 +53,7 @@ def generate_grid_coords(gx, gy):
 
     Returns
     -------
-    (X, Y) ndarray
+    (X, Y) numpy.ndarray
         List of coordinates in meshgrid
 
     """
@@ -90,9 +90,9 @@ def get_xy_steps(bbox, h_dim):
 
     Returns
     -------
-    x_steps, (X, ) ndarray
+    x_steps, (X, ) numpy.ndarray
         Number of grids in x dimension.
-    y_steps: (Y, ) ndarray
+    y_steps: (Y, ) numpy.ndarray
         Number of grids in y dimension.
 
     """
@@ -138,21 +138,21 @@ def natural_neighbor_to_grid(xp, yp, variable, grid_x, grid_y):
 
     Parameters
     ----------
-    xp: (N, ) ndarray
+    xp: (N, ) numpy.ndarray
         x-coordinates of observations
-    yp: (N, ) ndarray
+    yp: (N, ) numpy.ndarray
         y-coordinates of observations
-    variable: (N, ) ndarray
+    variable: (N, ) numpy.ndarray
         observation values associated with (xp, yp) pairs.
         IE, variable[i] is a unique observation at (xp[i], yp[i])
-    grid_x: (M, 2) ndarray
+    grid_x: (M, 2) numpy.ndarray
         Meshgrid associated with x dimension
-    grid_y: (M, 2) ndarray
+    grid_y: (M, 2) numpy.ndarray
         Meshgrid associated with y dimension
 
     Returns
     -------
-    img: (M, N) ndarray
+    img: (M, N) numpy.ndarray
         Interpolated values on a 2-dimensional grid
 
     See Also
@@ -177,16 +177,16 @@ def inverse_distance_to_grid(xp, yp, variable, grid_x, grid_y, r, gamma=None, ka
 
     Parameters
     ----------
-    xp: (N, ) ndarray
+    xp: (N, ) numpy.ndarray
         x-coordinates of observations.
-    yp: (N, ) ndarray
+    yp: (N, ) numpy.ndarray
         y-coordinates of observations.
-    variable: (N, ) ndarray
+    variable: (N, ) numpy.ndarray
         observation values associated with (xp, yp) pairs.
         IE, variable[i] is a unique observation at (xp[i], yp[i]).
-    grid_x: (M, 2) ndarray
+    grid_x: (M, 2) numpy.ndarray
         Meshgrid associated with x dimension.
-    grid_y: (M, 2) ndarray
+    grid_y: (M, 2) numpy.ndarray
         Meshgrid associated with y dimension.
     r: float
         Radius from grid center, within which observations
@@ -204,7 +204,7 @@ def inverse_distance_to_grid(xp, yp, variable, grid_x, grid_y, r, gamma=None, ka
 
     Returns
     -------
-    img: (M, N) ndarray
+    img: (M, N) numpy.ndarray
         Interpolated values on a 2-dimensional grid
 
     See Also
@@ -230,11 +230,11 @@ def interpolate_to_grid(x, y, z, interp_type='linear', hres=50000,
 
     Parameters
     ----------
-    x: array_like
+    x: array-like
         x coordinate, can have units of linear distance or degrees
-    y: array_like
+    y: array-like
         y coordinate, can have units of linear distance or degrees
-    z: array_like
+    z: array-like
         observation value
     interp_type: str
         What type of interpolation to use. Available options include:
@@ -269,11 +269,11 @@ def interpolate_to_grid(x, y, z, interp_type='linear', hres=50000,
 
     Returns
     -------
-    grid_x: (N, 2) ndarray
+    grid_x: (N, 2) numpy.ndarray
         Meshgrid for the resulting interpolation in the x dimension
-    grid_y: (N, 2) ndarray
-        Meshgrid for the resulting interpolation in the y dimension ndarray
-    img: (M, N) ndarray
+    grid_y: (N, 2) numpy.ndarray
+        Meshgrid for the resulting interpolation in the y dimension numpy.ndarray
+    img: (M, N) numpy.ndarray
         2-dimensional array representing the interpolated values for each grid.
 
     Notes
@@ -316,10 +316,10 @@ def interpolate_to_isosurface(level_var, interp_var, level, bottom_up_search=Tru
 
     Parameters
     ----------
-    level_var: array_like (P, M, N)
+    level_var: array-like (P, M, N)
         Level values in 3D grid on common vertical coordinate (e.g., PV values on
         isobaric levels). Assumes height dimension is highest to lowest in atmosphere.
-    interp_var: array_like (P, M, N)
+    interp_var: array-like (P, M, N)
         Variable on 3D grid with same vertical coordinate as level_var to interpolate to
         given level (e.g., potential temperature on isobaric levels)
     level: int or float
@@ -330,7 +330,7 @@ def interpolate_to_isosurface(level_var, interp_var, level, bottom_up_search=Tru
 
     Returns
     -------
-    interp_level: (M, N) ndarray
+    interp_level: (M, N) numpy.ndarray
         The interpolated variable (e.g., potential temperature) on the desired level (e.g.,
         2 PVU surface)
 

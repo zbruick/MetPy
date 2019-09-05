@@ -1210,7 +1210,7 @@ def mixing_ratio_from_relative_humidity(relative_humidity, temperature, pressure
 
     Parameters
     ----------
-    relative_humidity: array_like
+    relative_humidity: array-like
         The relative humidity expressed as a unitless ratio in the range [0, 1]. Can also pass
         a percentage if proper units are attached.
     temperature: `pint.Quantity`
@@ -1593,13 +1593,13 @@ def isentropic_interpolation(theta_levels, pressure, temperature, *args, axis=0,
 
     Parameters
     ----------
-    theta_levels : array_like
+    theta_levels : array-like
         One-dimensional array of desired theta surfaces
-    pressure : array_like
+    pressure : array-like
         One-dimensional array of pressure levels
-    temperature : array_like
+    temperature : array-like
         Array of temperature
-    args : array_like, optional
+    args : array-like, optional
         Any additional variables will be interpolated to each isentropic level.
 
     Returns

@@ -295,14 +295,14 @@ def advection(scalar, wind, deltas):
 
     Parameters
     ----------
-    scalar : ndarray
+    scalar : numpy.ndarray
         Array (with N-dimensions) with the quantity to be advected.
     wind : sequence of arrays
         Length M sequence of N-dimensional arrays.  Represents the flow,
         with a component of the wind in each dimension.  For example, for
         horizontal advection, this could be a list: [u, v], where u and v
         are each a 2-dimensional array.
-    deltas : sequence of floats or ndarray
+    deltas : sequence of floats or numpy.ndarray
         A (length M) sequence containing the grid spacing(s) in each dimension. If using
         arrays, in each array there should be one item less than the size of `scalar` along the
         applicable axis.
@@ -415,7 +415,7 @@ def geostrophic_wind(heights, f, dx, dy):
     heights : (M, N) `pint.Quantity`
         The height field, with either leading dimensions of (x, y) or trailing dimensions
         of (y, x), depending on the value of ``dim_order``.
-    f : array_like
+    f : array-like
         The coriolis parameter.  This can be a scalar to be applied
         everywhere or an array of values.
     dx : `pint.Quantity`
@@ -453,9 +453,9 @@ def ageostrophic_wind(heights, f, dx, dy, u, v, dim_order='yx'):
 
     Parameters
     ----------
-    heights : (M, N) ndarray
+    heights : (M, N) numpy.ndarray
         The height or geopotential field.
-    f : array_like
+    f : array-like
         The coriolis parameter.  This can be a scalar to be applied
         everywhere or an array of values.
     dx : `pint.Quantity`
@@ -613,7 +613,7 @@ def absolute_vorticity(u, v, dx, dy, lats, dim_order='yx'):
     dy : `pint.Quantity`
         The grid spacing(s) in the y-direction. If an array, there should be one item less than
         the size of `u` along the applicable axis.
-    lats : (M, N) ndarray
+    lats : (M, N) numpy.ndarray
         latitudes of the wind data in radians or with appropriate unit information attached
 
     Returns
@@ -661,7 +661,7 @@ def potential_vorticity_baroclinic(potential_temperature, pressure, u, v, dx, dy
     dy : `pint.Quantity`
         The grid spacing(s) in the y-direction. If an array, there should be one item less than
         the size of `u` along the applicable axis.
-    lats : (M, N) ndarray
+    lats : (M, N) numpy.ndarray
         latitudes of the wind data in radians or with appropriate unit information attached
 
     Returns
@@ -734,7 +734,7 @@ def potential_vorticity_barotropic(heights, u, v, dx, dy, lats, dim_order='yx'):
     dy : `pint.Quantity`
         The grid spacing(s) in the y-direction. If an array, there should be one item less than
         the size of `u` along the applicable axis.
-    lats : (M, N) ndarray
+    lats : (M, N) numpy.ndarray
         latitudes of the wind data in radians or with appropriate unit information attached
 
     Returns
@@ -788,7 +788,7 @@ def inertial_advective_wind(u, v, u_geostrophic, v_geostrophic, dx, dy, lats):
     dy : `pint.Quantity`
         The grid spacing(s) in the y-direction. If an array, there should be one item less than
         the size of `u` along the applicable axis.
-    lats : (M, N) ndarray
+    lats : (M, N) numpy.ndarray
         latitudes of the wind data in radians or with appropriate unit information attached
 
     Returns

@@ -540,7 +540,7 @@ def coriolis_parameter(latitude):
 
     Parameters
     ----------
-    latitude : array_like
+    latitude : array-like
         Latitude at each point
 
     Returns
@@ -619,7 +619,7 @@ def sigma_to_pressure(sigma, psfc, ptop):
 
     Parameters
     ----------
-    sigma : ndarray
+    sigma : numpy.ndarray
         The sigma levels to be converted to pressure levels.
 
     psfc : `pint.Quantity`
