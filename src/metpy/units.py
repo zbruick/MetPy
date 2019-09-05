@@ -8,7 +8,7 @@ for good temperature support.
 
 Attributes
 ----------
-units : :class:`pint.UnitRegistry`
+units : :class: `pint.UnitRegistry()`
     The unit registry used throughout the package. Any use of units in MetPy should
     import this registry and use it to grab units.
 
@@ -55,7 +55,7 @@ def pandas_dataframe_to_unit_arrays(df, column_units=None):
 
     Parameters
     ----------
-    df : `pandas.DataFrame`
+    df : `pandas.DataFrame()`
         Data in pandas dataframe.
 
     column_units : dict
@@ -95,10 +95,10 @@ def concatenate(arrs, axis=0):
 
     Parameters
     ----------
-    arrs : Sequence of arrays
+    arrs : sequence of arrays
         The items to be joined together
 
-    axis : integer, optional
+    axis : int, optional
         The array axis along which to join the arrays. Defaults to 0 (the first dimension)
 
     Returns
@@ -167,13 +167,13 @@ def diff(x, **kwargs):
 def atleast_1d(*arrs):
     r"""Convert inputs to arrays with at least one dimension.
 
-    Scalars are converted to 1-dimensional arrays, whilst other
+    Scalars are converted to 1-dimensional arrays, while other
     higher-dimensional inputs are preserved. This is a thin wrapper
     around `numpy.atleast_1d` to preserve units.
 
     Parameters
     ----------
-    arrs : arbitrary positional arguments
+    arrs : array_like
         Input arrays to be converted if necessary
 
     Returns
@@ -197,12 +197,12 @@ def atleast_2d(*arrs):
     r"""Convert inputs to arrays with at least two dimensions.
 
     Scalars and 1-dimensional arrays are converted to 2-dimensional arrays,
-    whilst other higher-dimensional inputs are preserved. This is a thin wrapper
+    while other higher-dimensional inputs are preserved. This is a thin wrapper
     around `numpy.atleast_2d` to preserve units.
 
     Parameters
     ----------
-    arrs : arbitrary positional arguments
+    arrs : array_like
         Input arrays to be converted if necessary
 
     Returns

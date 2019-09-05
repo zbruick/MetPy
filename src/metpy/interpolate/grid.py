@@ -20,7 +20,7 @@ def generate_grid(horiz_dim, bbox):
     ----------
     horiz_dim: integer
         Horizontal resolution
-    bbox: dictionary
+    bbox: dict
         Dictionary containing coordinates for corners of study area.
 
     Returns
@@ -63,7 +63,7 @@ def generate_grid_coords(gx, gy):
 def get_xy_range(bbox):
     r"""Return x and y ranges in meters based on bounding box.
 
-    bbox: dictionary
+    bbox: dict
         dictionary containing coordinates for corners of study area
 
     Returns
@@ -83,7 +83,7 @@ def get_xy_range(bbox):
 def get_xy_steps(bbox, h_dim):
     r"""Return meshgrid spacing based on bounding box.
 
-    bbox: dictionary
+    bbox: dict
         Dictionary containing coordinates for corners of study area.
     h_dim: integer
         Horizontal resolution in meters.
@@ -117,7 +117,7 @@ def get_boundary_coords(x, y, spatial_pad=0):
 
     Returns
     -------
-    bbox: dictionary
+    bbox: dict
         dictionary containing coordinates for corners of study area
 
     """
@@ -263,7 +263,7 @@ def interpolate_to_grid(x, y, z, interp_type='linear', hres=50000,
         information.
     rbf_smooth: float
         Smoothing value applied to rbf interpolation.  Higher values result in more smoothing.
-    boundary_coords: dictionary
+    boundary_coords: dict
         Optional dictionary containing coordinates of the study area boundary. Dictionary
         should be in format: {'west': west, 'south': south, 'east': east, 'north': north}
 

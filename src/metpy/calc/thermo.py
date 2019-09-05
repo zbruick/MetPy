@@ -1593,12 +1593,23 @@ def isentropic_interpolation(theta_levels, pressure, temperature, *args, axis=0,
 
     Parameters
     ----------
-    theta_levels : array
+    theta_levels : array_like
         One-dimensional array of desired theta surfaces
-    pressure : array
+    pressure : array_like
         One-dimensional array of pressure levels
-    temperature : array
+    temperature : array_like
         Array of temperature
+    args : array_like, optional
+        Any additional variables will be interpolated to each isentropic level.
+
+    Returns
+    -------
+    list
+        List with pressure at each isentropic level, followed by each additional
+        argument interpolated to isentropic coordinates.
+
+    Other Parameters
+    ----------------
     axis : int, optional
         The axis corresponding to the vertical in the temperature array, defaults to 0.
     temperature_out : bool, optional
@@ -1611,7 +1622,7 @@ def isentropic_interpolation(theta_levels, pressure, temperature, *args, axis=0,
     bottom_up_search : bool, optional
         Controls whether to search for theta levels bottom-up, or top-down. Defaults to
         True, which is bottom-up search.
-    args : array, optional
+    args : array-like, optional
         Any additional variables will be interpolated to each isentropic level.
 
     Returns
@@ -2218,7 +2229,7 @@ def brunt_vaisala_period(heights, potential_temperature, axis=0):
     ----------
     heights : `pint.Quantity`
         One-dimensional profile of atmospheric height
-    potential_temperature : pint.Quantity`
+    potential_temperature : `pint.Quantity`
         Atmospheric potential temperature
     axis : int, optional
         The axis corresponding to vertical in the potential temperature array, defaults to 0.

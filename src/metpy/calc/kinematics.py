@@ -295,14 +295,14 @@ def advection(scalar, wind, deltas):
 
     Parameters
     ----------
-    scalar : N-dimensional array
+    scalar : ndarray
         Array (with N-dimensions) with the quantity to be advected.
     wind : sequence of arrays
         Length M sequence of N-dimensional arrays.  Represents the flow,
         with a component of the wind in each dimension.  For example, for
         horizontal advection, this could be a list: [u, v], where u and v
         are each a 2-dimensional array.
-    deltas : sequence of float or ndarray
+    deltas : sequence of floats or ndarray
         A (length M) sequence containing the grid spacing(s) in each dimension. If using
         arrays, in each array there should be one item less than the size of `scalar` along the
         applicable axis.
@@ -524,10 +524,6 @@ def montgomery_streamfunction(height, temperature):
     * :math:`C_p` is specific heat at constant pressure for dry air
     * :math:`T` is temperature of the isentropic surface
 
-    See Also
-    --------
-    get_isentropic_pressure
-
     """
     return (mpconsts.g * height) + (mpconsts.Cp_d * temperature)
 
@@ -558,13 +554,13 @@ def storm_relative_helicity(u, v, heights, depth, bottom=0 * units.m,
         v component winds
     heights : array-like
         atmospheric heights, will be converted to AGL
-    depth : number
+    depth : float or int
         depth of the layer
-    bottom : number
+    bottom : float or int
         height of layer bottom AGL (default is surface)
-    storm_u : number
+    storm_u : float or int
         u component of storm motion (default is 0 m/s)
-    storm_v : number
+    storm_v : float or int
         v component of storm motion (default is 0 m/s)
 
     Returns
